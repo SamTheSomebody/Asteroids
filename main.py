@@ -19,7 +19,7 @@ def main():
 
     asteroid_field = AsteroidField()
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    
+
     dt = 0
 
     while True:
@@ -39,6 +39,11 @@ def main():
 
         interval = clock.tick(60)
         dt = interval / 1000
+
+        for a in asteroids:
+            if a.is_colliding(player):
+                print("Game over!")
+                return
 
 if __name__ == "__main__":
     main()
