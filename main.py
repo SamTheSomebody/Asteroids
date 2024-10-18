@@ -19,6 +19,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill(black_color)
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
         interval = clock.tick(60)
