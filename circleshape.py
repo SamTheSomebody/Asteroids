@@ -2,8 +2,8 @@ import pygame
 
 class CircleShape(pygame.sprite.Sprite):
     def __init__(self, x, y, radius):
-        if hasattr(self, "containters"):
-            super().__init__(self.containters)
+        if hasattr(self, "containers"):
+            super().__init__(self.containers)
         else:
             super().__init__()
         self.position = pygame.Vector2(x, y)
